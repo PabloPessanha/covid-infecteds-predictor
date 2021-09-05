@@ -13,6 +13,7 @@
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
+    "axios": "^0.21.3",
     "express": "^4.17.1"
   },
   "devDependencies": {
