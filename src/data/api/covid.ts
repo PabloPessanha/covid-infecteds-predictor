@@ -5,7 +5,5 @@ export default async function getCovidData(): Promise<CovidDataResponse> {
   const { data: convidInfos } = await axios.get(
     'https://covid.ourworldindata.org/data/owid-covid-data.json',
   );
-  const { data } = convidInfos.OWID_WRL;
-
-  return data;
+  return convidInfos.OWID_WRL;
 }
