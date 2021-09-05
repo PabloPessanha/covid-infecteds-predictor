@@ -5,8 +5,8 @@ import getCovidData from './api/covid';
 async function formatCovidData() {
   const { data } = await getCovidData();
   return data.map(({ new_cases }, index) => ({
-    day: index + 1,
-    infected: new_cases,
+    x: index + 1,
+    y: new_cases,
   }));
 }
 
