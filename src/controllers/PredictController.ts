@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import getLocalData from '../utils/getLocalData';
 import PredictService from '../services/PredictService';
 
-class PredictController {
+export default class PredictController {
   async data(_req: Request, res: Response) {
     try {
       const data = getLocalData();
@@ -16,7 +16,7 @@ class PredictController {
     try {
       const days = Number(req.query.days);
 
-      const prediction = PredictService.predict(days);
+      const prediction = new PredictService().predict(days);
 
       return res.status(200).json(prediction);
     } catch ({ message }) {
@@ -24,5 +24,3 @@ class PredictController {
     }
   }
 }
-
-export default new PredictController();

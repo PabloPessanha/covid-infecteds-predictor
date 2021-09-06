@@ -2,7 +2,7 @@ import { Matrix, MatrixTransposeView, solve } from 'ml-matrix';
 import { AxisObject } from './PredictService.d';
 import getLocalData from '../utils/getLocalData';
 
-class PredictService {
+export default class PredictService {
   private degree: number;
 
   private coefficients: number[];
@@ -68,5 +68,3 @@ class PredictService {
     return forecast;
   }
 }
-
-export default new PredictService();
