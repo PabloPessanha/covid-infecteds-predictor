@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { resolve } from 'path';
-import getCovidData from '../data/api/covid';
+import getCovidData from '../api/covid';
 
 export async function formatCovidData() {
   const { data } = await getCovidData();
