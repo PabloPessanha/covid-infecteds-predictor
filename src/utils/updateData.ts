@@ -11,7 +11,7 @@ export async function formatCovidData() {
 }
 
 export async function updateLocalData() {
-  const worldwideFile = resolve(__dirname, '..', 'data', 'worldwide-infected.json');
+  const worldwideFile = resolve(__dirname, '..', '..', 'worldwide-infected.json');
   const data = await formatCovidData();
   fs.writeFileSync(worldwideFile, JSON.stringify(data));
 }
