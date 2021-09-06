@@ -9,7 +9,6 @@ Pensando em uma aplicação de forma geral, o que me fez mais sentido nessa situ
 Foi utilizado para previsão, regressão polimonial, usando as variáveis **dias** e **número de casos**.
 
 **OBS**: Todas os dados foram adquiridos atráves do JSON do [Our world in data](https://github.com/owid/covid-19-data/tree/master/public/data).
-#
 ## **Como a aplicação funciona?**
 
 A aplicação é uma API na qual todos os dados são atualizados ao ser inicializada, e também a cada 24h, caso esteja rodando a partir de um servidor.
@@ -49,7 +48,6 @@ Ela possui 2 rotas, elas são:
     },
   ]
   ```
-#
 
 ## **Como posso testar a aplicação?**
 
