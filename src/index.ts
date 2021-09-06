@@ -1,16 +1,20 @@
 import express from 'express';
 import verifyNumber from './middlewares/verifyNumber';
 import PredictController from './controllers/PredictController';
-import { updateEveryDay } from './utils/updateData';
+import { updateEveryDay, updateLocalData } from './utils/updateData';
+
+updateLocalData();
+updateEveryDay();
+
+const predictController = new PredictController();
+const PORT = process.env.PORT || 4000;
 
 const app = express();
 
 app.use(express.json());
 
-app.get('/data', PredictController.data);
+app.get('/data', predictController.data);
 
-app.get('/predict', verifyNumber, PredictController.predict);
+app.get('/predict', verifyNumber, predictController.predict);
 
-updateEveryDay();
-
-app.listen(3333);
+app.listen(PORT);
