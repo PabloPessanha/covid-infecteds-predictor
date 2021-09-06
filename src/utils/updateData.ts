@@ -21,7 +21,7 @@ export function updateEveryDay() {
   const hour = minute * 60;
   const day = hour * 24;
 
-  setInterval(() => {
+  return setInterval(() => {
     updateLocalData();
   }, day);
 }
