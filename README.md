@@ -29,9 +29,9 @@ Ela possui 2 rotas, elas são:
   ]
   ```
 
-  - **/predict?days=x**: Recebe um query param, com a quantidade de dias que gostaria de prever a infecção, e recebe um array de objetos, sendo "day", o dia referente, e "infecteds", a quantidade de infectados referente naquele dia.
+  - **/predict?days=x**: Recebe um como parametro na URL a quantidade de dias que gostaria de prever a infecção, e retorna um array de objetos, sendo "day", o dia, e "infecteds", a quantidade de infectados referente naquele dia.
 
- *Exemplo*
+ *Exemplo de uso*
 
   ```http
   http://localhost:4000/precict?days=2
