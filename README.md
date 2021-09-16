@@ -1,5 +1,3 @@
-# Desafio D3
-
 ## **Proposta e resolução**
 
 A proposta dessa aplicação é prever a quantidade de infectados do COVID-19, variada a uma determinado quantidade de dias dada pelo usuário.
