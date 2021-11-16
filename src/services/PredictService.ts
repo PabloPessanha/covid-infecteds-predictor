@@ -56,10 +56,9 @@ export default class PredictService {
     this.coefficients = solve(A, B).to1DArray();
   }
 
-  predict(value: number) {
-    const days = this.arrayUntilValue(value);
+  predict(days: number) {
     const forecast = [];
-    for (let day = 1; day <= days.length; day += 1) {
+    for (let day = 1; day <= days; day += 1) {
       forecast.push({
         day,
         infecteds: Math.floor(this.forecastInfectedsDay(day) * 10),
